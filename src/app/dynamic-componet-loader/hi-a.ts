@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   template: `
-    <div>
+    <div class="box-primary">
       <h1>Hi, this is <b>A</b> component.</h1>
       With data:
       <code>
