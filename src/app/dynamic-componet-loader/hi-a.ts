@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 
 @Component({
   template: `
@@ -11,6 +11,10 @@ import { Component, Input } from '@angular/core';
     </div>
   `
 })
-export class HiAComponent {
+export class HiAComponent implements OnDestroy {
   @Input() data: any;
+
+  ngOnDestroy(): void {
+    console.debug('destroy component A');
+  }
 }
