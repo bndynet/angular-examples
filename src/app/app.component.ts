@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Invoker } from './decorator/invoker';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.group('===== decorator ======');
+    const invoker = new Invoker();
+    invoker.start();
+    console.groupEnd();
+  }
 }
 
 /*
