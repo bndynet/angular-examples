@@ -1,0 +1,14 @@
+.n {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+  font-size: 1em;
+  background-color: #efefef;
+  z-index: 100;
+  overflow: hidden;
+
+  .realnum {
+    visibility: hidden;
+  }
+}

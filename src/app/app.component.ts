@@ -6,8 +6,9 @@ import { Invoker } from './decorator/invoker';
   template: `
     <div>
       <app-start></app-start>
+      <animations-index></animations-index>
     </div>
-  `
+  `,
 })
 export class AppComponent implements OnInit {
   constructor() {}

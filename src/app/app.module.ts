@@ -8,9 +8,13 @@ import { StartComponent } from './dynamic-componet-loader/start.component';
 import { CompHostDirective } from './dynamic-componet-loader/comp-host.directive';
 import { HiAComponent } from './dynamic-componet-loader/hi-a';
 import { HiBComponent } from './dynamic-componet-loader/hi-b';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimationsNumComponent } from './animations/timer/number.component';
+import { AnimationsTimerComponent } from './animations/timer/timer.component';
+import { AnimationsIndexComponent } from './animations';
 
 @NgModule({
-  imports: [CommonModule, BrowserModule],
+  imports: [CommonModule, BrowserModule, BrowserAnimationsModule],
   providers: [],
   declarations: [
     AppComponent,
@@ -18,10 +22,14 @@ import { HiBComponent } from './dynamic-componet-loader/hi-b';
     // dynamic-componet-loader
     HiAComponent, // important, otherwise cannot use functions(such as json pipe) of CommonModule in this component
     HiBComponent,
-    CompHostDirective
+    CompHostDirective,
+
+    AnimationsNumComponent,
+    AnimationsTimerComponent,
+    AnimationsIndexComponent,
   ],
   entryComponents: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {}

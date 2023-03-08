@@ -3,7 +3,7 @@ import {
   OnInit,
   ViewChild,
   ComponentFactoryResolver,
-  OnDestroy
+  OnDestroy,
 } from '@angular/core';
 
 import { CompHostDirective } from './comp-host.directive';
@@ -15,17 +15,17 @@ import { HiItem } from './hi-item';
   selector: 'app-start',
   template: `
     <div>
-      <h3>Dynamic Component</h3>
+      <h1>Dynamic Component</h1>
       <ng-template compHost></ng-template>
     </div>
-  `
+  `,
 })
 export class StartComponent implements OnInit, OnDestroy {
   interval: any;
   idx: number = 0;
   compItems: HiItem[] = [
     { key: '0', component: HiAComponent },
-    { key: '1', component: HiBComponent }
+    { key: '1', component: HiBComponent },
   ];
 
   @ViewChild(CompHostDirective, { static: true }) compHost!: CompHostDirective;
@@ -43,12 +43,11 @@ export class StartComponent implements OnInit, OnDestroy {
 
   loadComponent() {
     const comp = this.compItems.find(
-      item => item.key == (this.idx % 2).toString()
+      (item) => item.key == (this.idx % 2).toString()
     )!.component;
 
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
-      comp
-    );
+    const componentFactory =
+      this.componentFactoryResolver.resolveComponentFactory(comp);
     const viewContainerRef = this.compHost.viewContainerRef;
     viewContainerRef.clear();
 
@@ -56,8 +55,8 @@ export class StartComponent implements OnInit, OnDestroy {
     (componentRef.instance as any).data = {
       index: this.idx,
       others: {
-        date: new Date()
-      }
+        date: new Date(),
+      },
     };
   }
 
