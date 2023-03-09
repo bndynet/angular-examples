@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   <animations-timer></animations-timer>
   <animations-timer [style]="{fontSize: '1.5rem'}"></animations-timer>
   <animations-timer [style]="{fontSize: '2rem'}"></animations-timer>
+  <animations-timer [style]="{fontSize: '5rem'}"></animations-timer>
   `,
 })
 export class AnimationsIndexComponent {}
