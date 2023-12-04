@@ -7,6 +7,7 @@ import { Invoker } from './decorator/invoker';
     <div>
       <app-start></app-start>
       <animations-index></animations-index>
+      <mdw-pie></mdw-pie>
     </div>
   `,
 })

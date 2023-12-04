@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationsNumComponent } from './animations/timer/number.component';
 import { AnimationsTimerComponent } from './animations/timer/timer.component';
 import { AnimationsIndexComponent } from './animations';
+
+import '@momentum-design/widgets';
+import { PieComponent } from './mdw';
 
 @NgModule({
   imports: [CommonModule, BrowserModule, BrowserAnimationsModule],
@@ -27,8 +30,11 @@ import { AnimationsIndexComponent } from './animations';
     AnimationsNumComponent,
     AnimationsTimerComponent,
     AnimationsIndexComponent,
+
+    PieComponent,
   ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor() {}
