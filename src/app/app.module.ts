@@ -28,7 +28,6 @@ import { AnimationsIndexComponent } from './animations';
     AnimationsTimerComponent,
     AnimationsIndexComponent,
   ],
-  entryComponents: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
