@@ -15,7 +15,7 @@ import { HiItem } from './hi-item';
   selector: 'dynamic',
   template: `
     <div>
-      <h1>Dynamic Component</h1>
+      <h1 class="text-4xl my-4">Dynamic Component</h1>
       <ng-template compHost></ng-template>
     </div>
   `,

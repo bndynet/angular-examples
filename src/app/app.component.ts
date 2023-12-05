@@ -1,25 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Invoker } from './decorator/invoker';
 import { routes } from './app-routing.module';
-import { MdwComponent } from './mdw';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div>
-      <a class="text-3xl font-bold underline" *ngFor="let r of links" routerLink="{{r.link}}">
-        {{r.text}}
-      </a>
-      <mdw></mdw>
-      <router-outlet></router-outlet>
-    </div>
-  `,
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  links = routes.map(r => ({
+  links = routes.filter(r => r.path).map(r => ({
     text: r.title,
     link: '/' + r.path,
-  }))
+  }));
+
   constructor() { }
 
   ngOnInit() {
