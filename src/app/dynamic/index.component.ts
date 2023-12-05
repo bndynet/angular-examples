@@ -20,7 +20,7 @@ import { HiItem } from './hi-item';
     </div>
   `,
 })
-export class StartComponent implements OnInit, OnDestroy {
+export class DynamicIndexComponent implements OnInit, OnDestroy {
   interval: any;
   idx: number = 0;
   compItems: HiItem[] = [

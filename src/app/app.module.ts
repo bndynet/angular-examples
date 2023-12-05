@@ -4,25 +4,28 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 // dynamic-componet-loader
-import { StartComponent } from './dynamic-componet-loader/start.component';
-import { CompHostDirective } from './dynamic-componet-loader/comp-host.directive';
-import { HiAComponent } from './dynamic-componet-loader/hi-a';
-import { HiBComponent } from './dynamic-componet-loader/hi-b';
+import { DynamicIndexComponent } from './dynamic/index.component';
+import { CompHostDirective } from './dynamic/comp-host.directive';
+import { HiAComponent } from './dynamic/hi-a';
+import { HiBComponent } from './dynamic/hi-b';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationsNumComponent } from './animations/timer/number.component';
 import { AnimationsTimerComponent } from './animations/timer/timer.component';
 import { AnimationsIndexComponent } from './animations';
 
 import '@momentum-design/widgets';
-import { PieComponent } from './mdw';
+//import { MdwIndexComponent, MdwChartComponent } from './mdw';
+import { AppRoutingModule } from './app-routing.module';
+import { MdwChartComponent, MdwComponent } from './mdw';
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, BrowserAnimationsModule],
+  imports: [CommonModule, BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],
   declarations: [
     AppComponent,
-    StartComponent,
-    // dynamic-componet-loader
+    
+    DynamicIndexComponent,
+    // dynamic-component-loader
     HiAComponent, // important, otherwise cannot use functions(such as json pipe) of CommonModule in this component
     HiBComponent,
     CompHostDirective,
@@ -31,7 +34,8 @@ import { PieComponent } from './mdw';
     AnimationsTimerComponent,
     AnimationsIndexComponent,
 
-    PieComponent,
+    MdwComponent,
+    MdwChartComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
