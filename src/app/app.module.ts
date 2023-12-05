@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
-// dynamic-componet-loader
-import { DynamicIndexComponent } from './dynamic/index.component';
+import { DynamicComponent } from './dynamic/index.component';
 import { CompHostDirective } from './dynamic/comp-host.directive';
 import { HiAComponent } from './dynamic/hi-a';
 import { HiBComponent } from './dynamic/hi-b';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 import { AnimationsNumComponent } from './animations/timer/number.component';
 import { AnimationsTimerComponent } from './animations/timer/timer.component';
 import { AnimationsIndexComponent } from './animations';
@@ -24,8 +25,7 @@ import { MdwChartComponent, MdwComponent } from './mdw';
   declarations: [
     AppComponent,
     
-    DynamicIndexComponent,
-    // dynamic-component-loader
+    DynamicComponent,
     HiAComponent, // important, otherwise cannot use functions(such as json pipe) of CommonModule in this component
     HiBComponent,
     CompHostDirective,

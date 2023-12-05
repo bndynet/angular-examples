@@ -7,7 +7,7 @@ import { MdwComponent } from './mdw';
   selector: 'app-root',
   template: `
     <div>
-      <a *ngFor="let r of links" routerLink="{{r.link}}">
+      <a class="text-3xl font-bold underline" *ngFor="let r of links" routerLink="{{r.link}}">
         {{r.text}}
       </a>
       <mdw></mdw>

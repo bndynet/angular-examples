@@ -12,7 +12,7 @@ import { HiBComponent } from './hi-b';
 import { HiItem } from './hi-item';
 
 @Component({
-  selector: 'dynamic-component',
+  selector: 'dynamic',
   template: `
     <div>
       <h1>Dynamic Component</h1>
@@ -20,7 +20,7 @@ import { HiItem } from './hi-item';
     </div>
   `,
 })
-export class DynamicIndexComponent implements OnInit, OnDestroy {
+export class DynamicComponent implements OnInit, OnDestroy {
   interval: any;
   idx: number = 0;
   compItems: HiItem[] = [
